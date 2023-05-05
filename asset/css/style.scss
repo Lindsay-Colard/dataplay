@@ -8,6 +8,11 @@
     --color-scampi: #7571A3;
     --color-christalle: #3D1F5A;
     --color-rainbow: #FFA69E, #FFEEDD, #B8F2E6, #AED9E0, #9CBBF7;
+
+    --font-big: 26px;
+    --font-intermediate: 16px;
+    --font-medium: 16px;
+    --font-small: 9px;
 }
 
 *{
@@ -16,6 +21,11 @@
 }
 html, body{
     scroll-behavior: smooth;
+    line-height: 1.618;
+}
+
+body{
+    padding: 0 32px 0 32px;
 }
 
 ::-webkit-scrollbar {
@@ -53,32 +63,90 @@ nav{
   }
 
   &--intro{
-    
   }
 }
+
 .section{
     scroll-snap-align: start;
     min-height: 100vh;
 
-    &--top{
-        background-color: pink;
-    }
+    // &--top{
+    //     background-color: pink;
+    // }
 
-    &--intro{
-        // Display grid
-        background-color: peachpuff;
-    }
+    // &--intro{
+    //     // Display grid
+    //     background-color: peachpuff;
+    padding: 64px 0 0 0;
+    // }
 
-    &--graphique{
-        background-color: palegoldenrod;
-        height: 120vh;
-    }
+    // &--graphique{
+    //     background-color: palegoldenrod;
+    //     height: 120vh;
+    // }
 
-    &--vote{
-        background-color: palegreen;
-    }
+    // &--vote{
+    //     background-color: palegreen;
+    // }
 
-    &--commentaires{
-        background-color: paleturquoise;
+    // &--commentaires{
+    //     background-color: paleturquoise;
+    // }
+}
+
+// Titles
+.title{
+    color: #3D1F5A;
+}
+
+.title--big{
+    font-family: snicker, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--font-big);
+    padding-bottom: 16px;
+}
+
+.title--alt{
+    font-family: vag-rundschrift-d, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.study__hamster{
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+p{
+    font-size: var(--font-medium);
+    font-family: vag-rundschrift-d, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    padding-bottom: 16px;
+    color: #3D1F5A;
+}
+
+// TABLET
+@media (min-width: 768px){
+    :root{
+        --font-big: 47px;
+        --font-intermediate: 29px;
+        --font-medium: 18px;
+        --font-small: 11px;
+    }
+}
+
+// DESKTOP
+@media (min-width: 1366px){
+    :root{
+        --font-big: 52px;
+        --font-intermediate: 32px;
+        --font-medium: 20px;
+        --font-small: 12px;
     }
 }
