@@ -1,0 +1,73 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-rose_bud: #FFA69E;
+  --color-bridal_heath: #FFEEDD;
+  --color-water_leaf: #B8F2E6;
+  --color-powder_blue: #AED9E0;
+  --color-perano: #9CBBF7;
+  --color-scampi: #7571A3;
+  --color-christalle: #3D1F5A;
+  --color-rainbow: #FFA69E, #FFEEDD, #B8F2E6, #AED9E0, #9CBBF7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.highlight {
+  background: linear-gradient(to right, var(--color-rainbow));
+  padding: 2px 4px;
+  border-radius: 8px;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.svg--scrolltop {
+  display: block;
+  z-index: 10;
+  width: 25px;
+  height: 25px;
+  fill: black;
+  padding: 25px;
+  box-sizing: content-box;
+}
+.section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+.section--top {
+  background-color: pink;
+}
+.section--intro {
+  background-color: peachpuff;
+}
+.section--graphique {
+  background-color: palegoldenrod;
+  height: 120vh;
+}
+.section--vote {
+  background-color: palegreen;
+}
+.section--commentaires {
+  background-color: paleturquoise;
+}/*# sourceMappingURL=style.css.map */
