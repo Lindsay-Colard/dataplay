@@ -1,0 +1,246 @@
+:root{
+    --color-white: #FFFFFF;
+    --color-rose_bud: #FFA69E;
+    --color-bridal_heath: #FFEEDD;
+    --color-water_leaf: #B8F2E6;
+    --color-powder_blue: #AED9E0;
+    --color-perano: #9CBBF7;
+    --color-scampi: #7571A3;
+    --color-christalle: #3D1F5A;
+    --color-rainbow: #FFA69E, #FFEEDD, #B8F2E6, #AED9E0, #9CBBF7;
+
+    --font-big: 26px;
+    --font-intermediate: 16px;
+    --font-medium: 16px;
+    --font-small: 9px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body{
+    scroll-behavior: smooth;
+    line-height: 1.618;
+}
+
+body{
+    padding: 0 32px 0 32px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+// .scroll{
+//     scroll-behavior: smooth;
+//     scroll-snap-type : y mandatory;
+//     overflow-y: scroll;
+//     height: 100vh;
+// }
+
+.highlight{
+    background: linear-gradient(to right, var(--color-rainbow));
+    padding: 2px 4px;
+    border-radius: 8px;
+}
+
+// NAV
+nav{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.svg{
+    &--scrolltop{
+    display: block;
+    z-index: 10;
+    width: 25px;
+    height: 25px;
+    fill:black ;
+    padding: 25px;
+    box-sizing: content-box;
+  }
+
+  &--intro{
+  }
+}
+
+.section{
+    scroll-snap-align: start;
+    min-height: 100vh;
+
+    // &--top{
+    //     background-color: pink;
+    // }
+
+    // &--intro{
+    //     // Display grid
+    //     background-color: peachpuff;
+    padding: 64px 0 0 0;
+    // }
+
+    // &--graphique{
+    //     background-color: palegoldenrod;
+    //     height: 120vh;
+    // }
+
+    // &--vote{
+    //     background-color: palegreen;
+    // }
+
+    // &--commentaires{
+    //     background-color: paleturquoise;
+    // }
+}
+//SECTION GRAPHIQUE
+.bold{
+    text-align: center;
+    font-weight: 700;
+    padding: 0%;
+}
+.btn__legend--style{
+    border: 3px solid var(--color-perano);
+    border-radius: 56px;
+    background-color: var(--color-perano);
+}
+.btn__container{
+    text-align: center;
+}
+.legende{
+    border: 1px solid var(--color-scampi);
+
+    &__el{
+        background-color: transparent;
+        border: none;
+        color: var(--color-scampi);
+        font-weight: 300;
+    }
+}
+// Titles
+.title{
+    color: #3D1F5A;
+}
+
+.title--big{
+    font-family: snicker, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--font-big);
+    padding-bottom: 16px;
+}
+
+.title--alt{
+    font-family: vag-rundschrift-d, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+.title--center{
+    text-align: center;
+}
+.title--small{
+    display: block;
+}
+//Paragraphes
+p{
+    font-size: var(--font-medium);
+    font-family: vag-rundschrift-d, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    padding-bottom: 16px;
+    color: #3D1F5A;
+}
+
+//Images
+.study__hamster{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+// TABLET
+@media (min-width: 768px){
+    :root{
+        --font-big: 47px;
+        --font-intermediate: 29px;
+        --font-medium: 18px;
+        --font-small: 11px;
+    }
+    //section intro
+    .section{
+        padding: 96px 0;
+    }
+    .section--intro{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, 0.3fr);
+    }
+    .grid__studyhamster{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .grid__textintro{
+        width: 425px;
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+    .study__hamster{
+        width: 450px;
+        height: 450px;
+    }
+}
+
+// DESKTOP
+@media (min-width: 1366px){
+    :root{
+        --font-big: 52px;
+        --font-intermediate: 32px;
+        --font-medium: 20px;
+        --font-small: 12px;
+    }
+
+    //section intro
+    .section{
+        padding: 128px 0;
+    }
+    .section--intro{
+        display: grid;
+        grid-template-columns: 33% 67%;
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .grid__studyhamster{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .grid__textintro{
+        width: 820px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    //Section graphique
+    .graphique{
+        margin: 16px 0;
+        width: 1238px ;
+        height: 561px ;
+    }
+    .btn__legend--style{
+        padding: 8px 16px;
+        margin: 24px 0;
+    }
+    //title
+    .title--small{
+        font-size: 32px;
+    }
+    //images
+    .study__hamster{
+        width: 550px;
+        height: 550px;
+    }
+    .svg--intro{
+        position: relative;
+        right: -515px;
+        top: -50px;
+    }
+
+}
